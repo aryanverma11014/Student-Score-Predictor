@@ -8,17 +8,17 @@ A beginner Machine Learning project built with Python and Scikit-Learn that pred
 
 ## 🚀 Features
 
-✅ Reads data from a CSV file
+- Reads data from a CSV file
 
-✅ Trains a Machine Learning model using Linear Regression
+- Trains a Machine Learning model using Linear Regression
 
-✅ Predicts student scores
+- Predicts student scores
 
-✅ Takes user input
+- Takes user input
 
-✅ Displays model accuracy
+- Displays model accuracy
 
-✅ Visualizes data using Matplotlib
+- Visualizes data using Matplotlib
 
 ---
 

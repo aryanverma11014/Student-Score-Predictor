@@ -1,37 +1,37 @@
-# 🎓 Student Score Predictor
+# Student Score Predictor
 
-A beginner Machine Learning project built with Python and Scikit-Learn that predicts a student's exam score based on:
+A beginner-friendly machine learning project that predicts a student's final exam score using study hours, attendance percentage, and previous marks.
 
-- Hours Studied
-- Attendance Percentage
-- Previous Marks
+## Overview
 
-## 🚀 Features
+This project demonstrates the basic ML workflow: loading a dataset, selecting features, splitting training/testing data, training a Linear Regression model, checking model score, taking user input, making a prediction, and visualizing the data.
 
-- Reads data from a CSV file
+## Tech Stack
 
-- Trains a Machine Learning model using Linear Regression
+- Python
+- Pandas
+- Scikit-Learn
+- Matplotlib
 
-- Predicts student scores
+## Features
 
-- Takes user input
+- Reads student data from a CSV file
+- Trains a Linear Regression model
+- Predicts a student's final score from user input
+- Displays model score on test data
+- Prints learned coefficients
+- Visualizes the relationship between hours studied and score
 
-- Displays model accuracy
+## Dataset
 
-- Visualizes data using Matplotlib
-
----
-
-## 📊 Dataset
-
-The dataset contains the following columns:
+The dataset uses four columns:
 
 | Column | Description |
-|----------|------------|
-| Hours | Hours studied by the student |
-| Attendance | Attendance percentage |
-| PreviousMarks | Previous exam marks |
-| Score | Final exam score |
+| --- | --- |
+| `Hours` | Number of hours studied |
+| `Attendance` | Attendance percentage |
+| `PreviousMarks` | Previous exam marks |
+| `Score` | Final exam score |
 
 Example:
 
@@ -42,28 +42,12 @@ Hours,Attendance,PreviousMarks,Score
 4,70,60,65
 ```
 
----
-
-## 🛠️ Technologies Used
-
-- Python
-- Pandas
-- Scikit-Learn
-- Matplotlib
-
----
-
-## 📦 Installation
+## Run Locally
 
 Clone the repository:
 
 ```bash
 git clone https://github.com/aryanverma11014/Student-Score-Predictor.git
-```
-
-Move into the project folder:
-
-```bash
 cd Student-Score-Predictor
 ```
 
@@ -73,80 +57,92 @@ Install dependencies:
 pip install pandas numpy scikit-learn matplotlib
 ```
 
----
-
-## ▶️ Run the Project
+Run the project:
 
 ```bash
 py train.py
 ```
 
-Example:
+On macOS/Linux, use:
+
+```bash
+python train.py
+```
+
+## Sample Output
 
 ```text
+model accuracy: 97.42%
+
+learned Coefficients:
+[1.23 0.45 0.67]
+
 Hours studied: 6
-Attendance (%): 75
-Previous Marks: 62
+attendance (%): 75
+previous Marks: 62
 
 Predicted Score: 69.53
 ```
 
----
+The exact accuracy and coefficients may change as the dataset changes.
 
-## 📈 Graph Visualization
+## Visualization
 
-The project also generates a graph showing the relationship between:
+The script generates a Matplotlib chart for:
 
-- Hours Studied
-- Student Score
-
-using Matplotlib.
-
----
-
-## 🧠 Machine Learning Concept
-
-This project uses **Linear Regression**.
-
-The model learns patterns from historical student data and predicts the most likely score for a new student.
-
-### Training
-
-```python
-model.fit(X_train, y_train)
+```text
+Hours Studied vs Score
 ```
 
-### Prediction
+Suggested screenshot to add later:
 
-```python
-model.predict(...)
+```text
+/screenshots/hours-vs-score.png
 ```
 
----
+## Machine Learning Concept
 
-## 📁 Project Structure
+This project uses Linear Regression. The model learns the relationship between the input features and final score, then predicts the likely score for a new student.
+
+Training step:
+
+```python
+model.fit(x_train, y_train)
+```
+
+Prediction step:
+
+```python
+model.predict([[Hours, Attendance, Previous_marks]])
+```
+
+## Project Structure
 
 ```text
 Student-Score-Predictor/
-│
 ├── data.csv
 ├── train.py
 └── README.md
 ```
 
----
+## What I Learned
 
-## 🎯 Future Improvements
+- Loading and preparing CSV data with Pandas
+- Splitting data into training and testing sets
+- Training a basic Scikit-Learn regression model
+- Taking user input for ML predictions
+- Creating a simple visualization with Matplotlib
 
-- Larger dataset
-- Better visualizations
-- Save trained model
-- GUI using Tkinter
-- Web version using Flask
+## Future Improvements
 
----
+- Add a larger and more realistic dataset
+- Save the trained model with `joblib` or `pickle`
+- Add a `requirements.txt` file
+- Add better charts and screenshots
+- Turn the model into a Flask or FastAPI prediction API
+- Build a simple web UI for predictions
 
-## 👨‍💻 Author
+## Author
 
 Aryan Verma
 
